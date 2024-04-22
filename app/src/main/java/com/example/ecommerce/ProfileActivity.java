@@ -6,25 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class CartActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
     ImageView back;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_profile);
 
         back = (ImageView) findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartActivity.this, MainActivity.class));
+                startActivity(new Intent(ProfileActivity.this, MainActivity.class));
             }
         });
     }
