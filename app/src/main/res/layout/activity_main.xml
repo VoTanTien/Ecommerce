@@ -304,6 +304,7 @@
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/productBtn"
                             android:layout_width="175dp"
                             android:layout_height="245dp"
                             android:layout_margin="8dp"

@@ -388,6 +388,7 @@
                 android:background="@drawable/background_button_profile"
                 android:textColor="@color/white"
                 android:text="LOG OUT"
+                android:textStyle="bold"
                 android:textSize="18dp"/>
         </LinearLayout>
     </ScrollView>
