@@ -7,13 +7,899 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="396dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="75dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableStart="@drawable/search_icon"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="Search anything"
+                    android:inputType="text"
+                    android:padding="8dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_bg">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/bell" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView2"
+                        app:srcCompat="@drawable/red_circle" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                        app:layout_constraintStart_toStartOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp">
+
+                <!--                <ProgressBar-->
+                <!--                    android:id="@+id/progressBarBanner"-->
+                <!--                    style="?android:attr/progressBarStyle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintHorizontal_bias="0.498"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintVertical_bias="0.0" />-->
+
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/banner_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Official Brand"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/recyclerViewOfficial"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:clipToPadding="false"-->
+                <!--                    android:paddingStart="16dp"-->
+                <!--                    android:paddingEnd="16dp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="100dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="8dp"
+                            app:srcCompat="@drawable/asus" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/textView11"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="8dp"-->
+                        <!--                            android:text="Asus"-->
+                        <!--                            android:textAlignment="center" />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView101"
+                            android:layout_width="100dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="8dp"
+                            app:srcCompat="@drawable/msi" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/textView111"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="8dp"-->
+                        <!--                            android:text="MSI"-->
+                        <!--                            android:textAlignment="center" />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView102"
+                            android:layout_width="100dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="8dp"
+                            app:srcCompat="@drawable/acer" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/textView111"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginTop="8dp"-->
+                        <!--                            android:text="MSI"-->
+                        <!--                            android:textAlignment="center" />-->
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--                <ProgressBar-->
+                <!--                    android:id="@+id/progressBarOfficial"-->
+                <!--                    style="?android:attr/progressBarStyle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/recyclerViewOfficial"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/recyclerViewOfficial"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/recyclerViewOfficial"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Popular products"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--                <ProgressBar-->
+                <!--                    android:id="@+id/progressBarPopular"-->
+                <!--                    style="?android:attr/progressBarStyle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:clipToPadding="false"-->
+                <!--                    android:paddingStart="16dp"-->
+                <!--                    android:paddingEnd="16dp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/productBtn"
+                            android:layout_width="175dp"
+                            android:layout_height="245dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/grey_background_main"
+                            android:elevation="3dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/pic"
+                                android:layout_width="175dp"
+                                android:layout_height="155dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/lt02" />
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:background="@drawable/white_background"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Laptop Asus ExpertBook B9400CEA KC1013W"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/ratingBar"
+                                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBar"
+                                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:indeterminate="false"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressTint="#ffc106"
+                                android:rating="3"
+                                android:stepSize="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic" />
+
+                            <TextView
+                                android:id="@+id/oldPriceTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$1000"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/title"
+                                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                            <TextView
+                                android:id="@+id/priceTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="$999"
+                                android:textColor="@color/green"
+                                app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt"
+                                app:layout_constraintStart_toEndOf="@+id/oldPriceTxt"
+                                app:layout_constraintTop_toTopOf="@+id/oldPriceTxt"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <TextView
+                                android:id="@+id/reviewTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="12"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/priceTxt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/priceTxt"
+                                app:srcCompat="@drawable/review" />
+
+                            <TextView
+                                android:id="@+id/ratingTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="(5)"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                                app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="175dp"
+                            android:layout_height="245dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/grey_background_main"
+                            android:elevation="3dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/pic1"
+                                android:layout_width="175dp"
+                                android:layout_height="155dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/lt03" />
+
+                            <View
+                                android:id="@+id/view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:background="@drawable/white_background"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic1" />
+
+                            <TextView
+                                android:id="@+id/title1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Laptop ASUS Zenbook 14 OLED UX3402VA KM085W"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/ratingBar1"
+                                app:layout_constraintTop_toBottomOf="@+id/ratingBar1" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBar1"
+                                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:indeterminate="false"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressTint="#ffc106"
+                                android:rating="3"
+                                android:stepSize="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic1" />
+
+                            <TextView
+                                android:id="@+id/oldPriceTxt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$1000"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/title1"
+                                app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+                            <TextView
+                                android:id="@+id/priceTxt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="$999"
+                                android:textColor="@color/green"
+                                app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt1"
+                                app:layout_constraintStart_toEndOf="@+id/oldPriceTxt1"
+                                app:layout_constraintTop_toTopOf="@+id/oldPriceTxt1"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <TextView
+                                android:id="@+id/reviewTxt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="12"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView71"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView71"
+                                app:layout_constraintTop_toTopOf="@+id/imageView71" />
+
+                            <ImageView
+                                android:id="@+id/imageView71"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/priceTxt1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/priceTxt1"
+                                app:srcCompat="@drawable/review" />
+
+                            <TextView
+                                android:id="@+id/ratingTxt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="(5)"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/ratingBar1"
+                                app:layout_constraintStart_toEndOf="@+id/ratingBar1"
+                                app:layout_constraintTop_toTopOf="@+id/ratingBar1" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="175dp"
+                            android:layout_height="245dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/grey_background_main"
+                            android:elevation="3dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/pic2"
+                                android:layout_width="175dp"
+                                android:layout_height="155dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/lt03" />
+
+                            <View
+                                android:id="@+id/view32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:background="@drawable/white_background"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic2" />
+
+                            <TextView
+                                android:id="@+id/title2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Laptop ASUS Zenbook 14 OLED UX3402VA KM085W"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/ratingBar2"
+                                app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBar2"
+                                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:indeterminate="false"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressTint="#ffc106"
+                                android:rating="3"
+                                android:stepSize="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic2" />
+
+                            <TextView
+                                android:id="@+id/oldPriceTxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$1000"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/title2"
+                                app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+                            <TextView
+                                android:id="@+id/priceTxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="$999"
+                                android:textColor="@color/green"
+                                app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt2"
+                                app:layout_constraintStart_toEndOf="@+id/oldPriceTxt2"
+                                app:layout_constraintTop_toTopOf="@+id/oldPriceTxt2"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <TextView
+                                android:id="@+id/reviewTxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="12"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView72"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView72"
+                                app:layout_constraintTop_toTopOf="@+id/imageView72" />
+
+                            <ImageView
+                                android:id="@+id/imageView72"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/priceTxt2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/priceTxt2"
+                                app:srcCompat="@drawable/review" />
+
+                            <TextView
+                                android:id="@+id/ratingTxt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="(5)"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/ratingBar2"
+                                app:layout_constraintStart_toEndOf="@+id/ratingBar2"
+                                app:layout_constraintTop_toTopOf="@+id/ratingBar2" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="175dp"
+                            android:layout_height="245dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/grey_background_main"
+                            android:elevation="3dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/pic3"
+                                android:layout_width="175dp"
+                                android:layout_height="155dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/lt02" />
+
+                            <View
+                                android:id="@+id/view33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:background="@drawable/white_background"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic3" />
+
+                            <TextView
+                                android:id="@+id/title3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Laptop Asus ExpertBook B9400CEA KC1013W"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/ratingBar3"
+                                app:layout_constraintTop_toBottomOf="@+id/ratingBar3" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBar3"
+                                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:indeterminate="false"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:progressTint="#ffc106"
+                                android:rating="3"
+                                android:stepSize="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pic3" />
+
+                            <TextView
+                                android:id="@+id/oldPriceTxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$1000"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/title3"
+                                app:layout_constraintTop_toBottomOf="@+id/title3" />
+
+                            <TextView
+                                android:id="@+id/priceTxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="$999"
+                                android:textColor="@color/green"
+                                app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt3"
+                                app:layout_constraintStart_toEndOf="@+id/oldPriceTxt3"
+                                app:layout_constraintTop_toTopOf="@+id/oldPriceTxt3"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <TextView
+                                android:id="@+id/reviewTxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="12"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView73"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView73"
+                                app:layout_constraintTop_toTopOf="@+id/imageView73" />
+
+                            <ImageView
+                                android:id="@+id/imageView73"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/priceTxt3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/priceTxt3"
+                                app:srcCompat="@drawable/review" />
+
+                            <TextView
+                                android:id="@+id/ratingTxt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="(5)"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/ratingBar3"
+                                app:layout_constraintStart_toEndOf="@+id/ratingBar3"
+                                app:layout_constraintTop_toTopOf="@+id/ratingBar3" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_gravity="bottom">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/btn_1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Explorer"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/btn_2" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Liked"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cartBtn"
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/btn_3" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Cart"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profileBtn"
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/btn_4" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Profile"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.bottomappbar.BottomAppBar>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
