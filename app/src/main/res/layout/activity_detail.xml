@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".DetailActivity">
+    tools:context=".Activity.DetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$999"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -151,71 +151,23 @@
                     app:layout_constraintStart_toEndOf="@+id/ratingBar"
                     app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="8dp"
-                    android:text="Description:"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+<!--                Không cần cái size đâu khỏi làm-->
 
-                <TextView
-                    android:id="@+id/descriptionTxt"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:lines="10"
-                    android:maxLines="15"
-                    android:text="Không còn đứng ngoài cho cuộc đua trong ngành laptop gaming, Lenovo đang dần cải thiện chất lượng của sản phẩm, không chỉ về thiết kế mà còn đó còn là hiệu năng và công nghệ bên trong. Chào mừng bạn đến với dòng sản phẩm laptop gaming Lenovo LOQ cùng model LOQ 15IRH8 82XV000PVN."
-                    android:textColor="@color/black"
-
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                android:orientation="horizontal">-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/textView10"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:text="Size"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textStyle="bold" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/recyclerSize"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp" />-->
-<!--            </LinearLayout>-->
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <com.google.android.material.appbar.AppBarLayout-->
-<!--                    android:id="@+id/toolbar"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
-
+<!--                    bị lỗi nên t comment lại, làm thì mở ra-->
 <!--                    <com.google.android.material.tabs.TabLayout-->
 <!--                        android:id="@+id/tabLayout"-->
 <!--                        android:layout_width="match_parent"-->
@@ -230,23 +182,27 @@
 <!--                        app:tabSelectedTextColor="@color/green"-->
 <!--                        app:tabTextAppearance="@style/tab_layout"-->
 <!--                        app:tabTextColor="@color/black" />-->
+<!--                    bị lỗi nên t comment lại, làm thì mở ra-->
 
-<!--                    <View-->
-<!--                        android:id="@+id/view3"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="1dp"-->
-<!--                        android:background="@color/darkGrey" />-->
-<!--                </com.google.android.material.appbar.AppBarLayout>-->
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/darkGrey" />
+                </com.google.android.material.appbar.AppBarLayout>
 
+<!--                bị lỗi nên t comment lại, làm thì mở ra-->
 <!--                <androidx.viewpager.widget.ViewPager-->
 <!--                    android:id="@+id/viewpager"-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="200dp"-->
 <!--                    android:background="@color/white" />-->
-<!--            </LinearLayout>-->
+<!--                bị lỗi nên t comment lại, làm thì mở ra-->
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addTocartBtn"
+                android:id="@+id/addToCartBtn"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

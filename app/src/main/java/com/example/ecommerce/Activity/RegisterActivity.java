@@ -1,4 +1,4 @@
-package com.example.ecommerce;
+package com.example.ecommerce.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.example.ecommerce.R;
 
 public class RegisterActivity extends AppCompatActivity {
     TextView login;
@@ -21,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                finish();
             }
         });
 

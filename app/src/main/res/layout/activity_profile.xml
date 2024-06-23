@@ -116,6 +116,7 @@
                             android:orientation="horizontal">
 
                             <LinearLayout
+                                android:id="@+id/editProfileBtn"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp"
@@ -145,6 +146,7 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/historyBtn"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp"
@@ -174,6 +176,7 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/changePassBtn"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_margin="10dp"
@@ -381,6 +384,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logOutBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"

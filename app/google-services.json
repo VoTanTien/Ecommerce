@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "480218563980",
+    "firebase_url": "https://techconnect-cd40d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "techconnect-cd40d",
+    "storage_bucket": "techconnect-cd40d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480218563980:android:1f5fe851a703708dc182a9",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnmQfMW1FJSwSj5XXRWAQcBbtBVfAvCkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
