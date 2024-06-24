@@ -23,15 +23,17 @@ public class ManagementCart {
         items.clear();
     }
 
-    public void insertItems(ItemsDomain item) {
+    public boolean insertItems(ItemsDomain item) {
         for(ItemsDomain element : items) {
             if (element.getTitle().equals(item.getTitle())) {
-                return;
+                return false;
             }
         }
 
         item.setNumberInCart(1);
         items.add(item);
+
+        return true;
     }
 
     public int count() {

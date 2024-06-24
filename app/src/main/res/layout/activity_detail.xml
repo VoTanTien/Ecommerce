@@ -168,35 +168,35 @@
                     android:orientation="vertical">
 
 <!--                    bị lỗi nên t comment lại, làm thì mở ra-->
-<!--                    <com.google.android.material.tabs.TabLayout-->
-<!--                        android:id="@+id/tabLayout"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="0dp"-->
-<!--                        app:tabBackground="@color/white"-->
-<!--                        app:tabGravity="fill"-->
-<!--                        app:tabIndicatorColor="@color/green"-->
-<!--                        app:tabIndicatorHeight="3dp"-->
-<!--                        app:tabMaxWidth="0dp"-->
-<!--                        app:tabMode="fixed"-->
-<!--                        app:tabSelectedTextColor="@color/green"-->
-<!--                        app:tabTextAppearance="@style/tab_layout"-->
-<!--                        app:tabTextColor="@color/black" />-->
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        app:tabBackground="@color/white"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/green"
+                        app:tabIndicatorHeight="3dp"
+                        app:tabMaxWidth="0dp"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/green"
+                        app:tabTextAppearance="@style/tab_layout"
+                        app:tabTextColor="@color/black" />
 <!--                    bị lỗi nên t comment lại, làm thì mở ra-->
 
                     <View
                         android:id="@+id/view3"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/darkGrey" />
+                        android:background="#d8d8d8" />
                 </com.google.android.material.appbar.AppBarLayout>
 
 <!--                bị lỗi nên t comment lại, làm thì mở ra-->
-<!--                <androidx.viewpager.widget.ViewPager-->
-<!--                    android:id="@+id/viewpager"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:background="@color/white" />-->
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white" />
 <!--                bị lỗi nên t comment lại, làm thì mở ra-->
 
             </LinearLayout>
