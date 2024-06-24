@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ItemsDomain implements Serializable {
+    int itemId;
     String title;
     String description;
     ArrayList<String> picUrl;
@@ -30,6 +31,7 @@ public class ItemsDomain implements Serializable {
         this.rating = rating;
     }
 
+    public int getItemId() {return itemId;}
     public String getTitle() {
         return title;
     }
