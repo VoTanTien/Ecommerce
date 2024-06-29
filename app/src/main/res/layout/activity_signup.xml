@@ -48,7 +48,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -72,7 +72,11 @@
             android:textStyle="bold" />
 
         <EditText
+<<<<<<< Updated upstream
             android:id="@+id/editTextText"
+=======
+            android:id="@+id/editTextEmail"
+>>>>>>> Stashed changes
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -91,18 +95,50 @@
             android:layout_marginTop="20dp"
             android:text="Password"
             android:textColor="#000000"
+<<<<<<< Updated upstream
             android:textSize="20sp"
+=======
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
+            android:hint="Enter your phone"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#707070"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Address"
+            android:textColor="#000000"
+            android:textSize="16sp"
+>>>>>>> Stashed changes
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+<<<<<<< Updated upstream
             android:hint="Enter your password"
             android:inputType="textPassword"
+=======
+            android:hint="Enter your address"
+            android:inputType="text"
+>>>>>>> Stashed changes
             android:padding="12dp"
             android:textColor="#707070"
             android:textSize="18sp"
