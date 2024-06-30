@@ -20,11 +20,14 @@ import com.example.ecommerce.Adapter.CartAdapter;
 import com.example.ecommerce.Adapter.PopularAdapter;
 import com.example.ecommerce.Domain.ItemsDomain;
 import com.example.ecommerce.Domain.OrderDomain;
+import com.example.ecommerce.Domain.UserDomain;
 import com.example.ecommerce.R;
 import com.example.ecommerce.databinding.ActivityCartBinding;
 import com.example.ecommerce.helper.ChangeNumberItemsListener;
 import com.example.ecommerce.helper.ManagementCart;
 import com.google.firebase.Firebase;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -56,15 +59,25 @@ public class CartActivity extends BaseActivity {
 
     double total = 0;
 
+    FirebaseAuth fAuth;
+    FirebaseUser user;
+    DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        fAuth = FirebaseAuth.getInstance();
+        user = fAuth.getCurrentUser();
+        myRef = database.getReference("Users").child(user.getUid());
+
         initView();
         //initView();
 
         initListener();
+
+        initUser();
 
         initInformation();
 
@@ -76,6 +89,7 @@ public class CartActivity extends BaseActivity {
         }
         Log.d("product quantity: ", itemsId);
     }
+
 
 
     private void initView() {
@@ -95,6 +109,28 @@ public class CartActivity extends BaseActivity {
         btnCheckout = (AppCompatButton) findViewById(R.id.checkOutBtn);
 
         cartRecyclerView = findViewById(R.id.cartView);
+    }
+
+    private void initUser() {
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    UserDomain userProfile = snapshot.getValue(UserDomain.class);
+                    userNameText.setText(userProfile.userName);
+                    userPhoneText.setText(userProfile.phone);
+                    userAddressText.setText(userProfile.address);
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Xử lý lỗi khi đọc dữ liệu
+            }
+        });
+
     }
 
     private void initInformation() {
@@ -158,7 +194,7 @@ public class CartActivity extends BaseActivity {
                     itemsId += item.getItemId() + ",";
                 }
 
-                int userId = 0;
+                String userId = user.getUid();
                 OrderDomain order = new OrderDomain(str, removeLastCharacter(itemsId), total, userId);
 
                 Log.d("abc", "itemsId: " + itemsId);

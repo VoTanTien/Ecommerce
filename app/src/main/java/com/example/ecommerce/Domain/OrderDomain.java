@@ -10,13 +10,13 @@ public class OrderDomain {
 
     public double total;
 
-    public Integer userId;
+    public String userId;
 
     public OrderDomain() {
 
     }
 
-    public OrderDomain(String date, String itemsId, double total, Integer userId) {
+    public OrderDomain(String date, String itemsId, double total, String userId) {
         this.date = date;
         this.itemsId = itemsId;
         this.total = total;

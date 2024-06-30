@@ -59,7 +59,7 @@
                         app:srcCompat="@drawable/profile" />
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/nameTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -72,15 +72,15 @@
                         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/emailTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="votien040302@gmail.com"
                         android:textColor="@color/white"
                         android:textSize="18sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView13"
-                        app:layout_constraintStart_toStartOf="@+id/textView13"
-                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                        app:layout_constraintEnd_toEndOf="@+id/nameTxt"
+                        app:layout_constraintStart_toStartOf="@+id/nameTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
 
                     <ImageView
                         android:id="@+id/imageView6"
@@ -108,7 +108,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView14">
+                        app:layout_constraintTop_toBottomOf="@+id/emailTxt">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -209,45 +209,6 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="24dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textView16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Password:"
-                                android:textColor="@color/green"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/textView17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Tienpro1234"
-                                android:textAlignment="viewEnd"
-                                android:textColor="#5B5B5B"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-
-                        <View
-                            android:id="@+id/view5"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginBottom="6dp"
-                            android:background="#D9D9D9" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:orientation="horizontal">
 
@@ -261,7 +222,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView171"
+                                android:id="@+id/phoneTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -297,7 +258,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView172"
+                                android:id="@+id/addressTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -369,7 +330,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textView174"
+                                android:id="@+id/nationTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
