@@ -57,7 +57,7 @@ public class CartActivity extends BaseActivity {
 
     double shippingRatio = 0.1;
 
-    double total = 0;
+    int total = 0;
 
     FirebaseAuth fAuth;
     FirebaseUser user;
@@ -225,7 +225,7 @@ public class CartActivity extends BaseActivity {
         totalFeeText.setText("$" + Math.round(productsPrice));
         deliveryText.setText("$" + Math.round(shipPrice));
 
-        total = Math.round(productsPrice + shipPrice);
+        total = (int) Math.round(productsPrice + shipPrice);
         totalBillText.setText("$" + total);
 
         Log.d("products price", "" + productsPrice);

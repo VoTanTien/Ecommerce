@@ -19,7 +19,7 @@
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="22dp"
                 android:text="TextView"
                 android:textColor="@color/black" />
         </LinearLayout>

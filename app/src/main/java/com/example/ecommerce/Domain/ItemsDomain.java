@@ -4,17 +4,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ItemsDomain implements Serializable {
-    int itemId;
-    String title;
-    String description;
-    ArrayList<String> picUrl;
-    String brand;
-    String type;
-    int price;
-    int oldPrice;
-    int review;
-    double rating;
-    int numberInCart;
+    public int itemId;
+    public String title;
+    public String description;
+    public ArrayList<String> picUrl;
+    public String brand;
+    public String type;
+    public int price;
+    public int oldPrice;
+    public int review;
+    public double rating;
+    public int numberInCart;
 
     public ItemsDomain() {
     }
